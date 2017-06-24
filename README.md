@@ -19,3 +19,7 @@
 ## Why?
 
 Sketch 43 added JSON source files (zipped). This git plugin unpacks & prettifies those files so that they can be added to source control. The idea is that this plugin could be added to git hooks and your sketch sources could be versioned along with your project
+
+## License
+
+git-sketch is released under the MIT license. See LICENSE.md for more information.
