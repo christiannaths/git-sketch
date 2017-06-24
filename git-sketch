@@ -59,10 +59,10 @@ main() {
         usage; exit 1
     fi
 
-    local subcommand="$1"; shift
-
-    export GIT_SKETCH_WORKINGDIR=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+    export GIT_SKETCH_WORKINGDIR="$(dirname "$(readlink -n "$0")")"
     export GIT_SKETCH_REPODIR=$(git rev-parse --show-toplevel)
+
+    local subcommand="$1"; shift
 
     if [ ! -e "$GIT_SKETCH_REPODIR" ]; then
         exit 1
